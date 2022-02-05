@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.Net.Http.Headers;
 using NetCore6.Bl.Settings;
+using NetCore6.Middlewares;
 using NetCore6.Model.IoC;
 using NetCore6.Services.IoC;
 using NetCore6.Settings;
@@ -81,6 +82,8 @@ namespace NetCore6
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseLogHTTP();
+
             // Configure the HTTP request pipeline.
             if (env.IsDevelopment())
             {
