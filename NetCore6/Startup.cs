@@ -1,3 +1,5 @@
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.Net.Http.Headers;
@@ -72,6 +74,7 @@ namespace NetCore6
 
             #region API Libraries
             services.SettingSwagger();
+            services.SettingHealthCheck();
             #endregion
 
             #region App Registries
@@ -102,6 +105,13 @@ namespace NetCore6
 
             app.UseEndpoints(endPoints => 
             {
+                endPoints.MapHealthChecks("/hc", new HealthCheckOptions()
+                {
+                    Predicate = _ => true,
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+
+                endPoints.MapHealthChecksUI();
                 endPoints.MapControllers();
             });
         }
