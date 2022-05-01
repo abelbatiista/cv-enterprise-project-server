@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -27,7 +26,6 @@ namespace Server.Services.Services.User
         #region Fields
 
         private readonly JWTSettings _jwtSettings;
-        private readonly IMapper _mapper;
         private readonly IValidator<UserDTO> _validator;
         private readonly UserManager<ApplicationIdentityUser> _userManager;
         private readonly SignInManager<ApplicationIdentityUser> _signInManager;
@@ -39,14 +37,12 @@ namespace Server.Services.Services.User
         public UserService
         (
             IOptions<JWTSettings> jwtSettings,
-            IMapper mapper,
             IValidator<UserDTO> validator,
             UserManager<ApplicationIdentityUser> userManager,
             SignInManager<ApplicationIdentityUser> signInManager
         )
         {
             _jwtSettings = jwtSettings.Value;
-            _mapper = mapper;
             _validator = validator;
             _userManager = userManager;
             _signInManager = signInManager;
