@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using NetCore6.Core.BaseModels;
 using NetCore6.Core.Constants;
 using NetCore6.Model.Extensions;
+using Server.Model.Entities.User;
 
 namespace NetCore6.Model.Context
 {
@@ -12,7 +14,7 @@ namespace NetCore6.Model.Context
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
         EntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
     }
-    public abstract class BaseDbContext : DbContext, IDbContext
+    public abstract class BaseDbContext : IdentityDbContext<ApplicationIdentityUser>, IDbContext
     {
         public BaseDbContext(DbContextOptions options) : base(options) { }
         public override int SaveChanges()

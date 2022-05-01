@@ -15,7 +15,7 @@ namespace NetCore6.Settings
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Solvex Dominicana",
+                        Name = "CV Enterprise Project",
                         Email = string.Empty,
                         Url = new Uri("https://solvex.com.do/"),
                     },

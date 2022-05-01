@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCore6.Services\NetCore6.Services.csproj" />
+    <ProjectReference Include="..\NetCore6.Services\Server.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,27 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore6.Core", "NetCore6.Core\NetCore6.Core.csproj", "{F4CF2ACD-B0A4-4EB3-A16C-8CA3ABAA6E71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Core", "NetCore6.Core\Server.Core.csproj", "{F4CF2ACD-B0A4-4EB3-A16C-8CA3ABAA6E71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore6.Model", "NetCore6.Model\NetCore6.Model.csproj", "{B5C4BB53-63E7-47C0-AA17-3910A4AB3F39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Model", "NetCore6.Model\Server.Model.csproj", "{B5C4BB53-63E7-47C0-AA17-3910A4AB3F39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore6.Bl", "NetCore6.Bl\NetCore6.Bl.csproj", "{3B8CA92F-98C7-422C-B67A-7893B5881FE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Bl", "NetCore6.Bl\Server.Bl.csproj", "{3B8CA92F-98C7-422C-B67A-7893B5881FE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore6.Services", "NetCore6.Services\NetCore6.Services.csproj", "{E00F4F42-0DA7-419C-A7FE-6A6F703BD46E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Services", "NetCore6.Services\Server.Services.csproj", "{E00F4F42-0DA7-419C-A7FE-6A6F703BD46E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore6", "NetCore6\NetCore6.csproj", "{033A4E11-DBC7-4164-BF6A-DCC3C7FB75BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Presentation", "NetCore6\Server.Presentation.csproj", "{033A4E11-DBC7-4164-BF6A-DCC3C7FB75BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore6.Services.Test", "NetCore6.Services.Test\NetCore6.Services.Test.csproj", "{82D40486-2A9B-4379-9603-60B83F2BA5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Services.Test", "NetCore6.Services.Test\Server.Services.Test.csproj", "{82D40486-2A9B-4379-9603-60B83F2BA5BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F4CF2ACD-B0A4-4EB3-A16C-8CA3ABAA6E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -48,5 +45,11 @@ Global
 		{82D40486-2A9B-4379-9603-60B83F2BA5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82D40486-2A9B-4379-9603-60B83F2BA5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82D40486-2A9B-4379-9603-60B83F2BA5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CEC71B1-AE88-4728-ABD8-D0909C4AEB2F}
 	EndGlobalSection
 EndGlobal

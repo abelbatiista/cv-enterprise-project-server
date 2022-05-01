@@ -1,6 +1,6 @@
 namespace NetCore6.Core.Settings
 {
-    public class ConnectionStrings
+    public class ConnectionStringSettings
     {
         public string DefaultConnection { get; set; }
     }

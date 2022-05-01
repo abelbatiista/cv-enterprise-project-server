@@ -8,6 +8,8 @@ using NetCore6.Middlewares;
 using NetCore6.Model.IoC;
 using NetCore6.Services.IoC;
 using NetCore6.Settings;
+using Server.Core.Settings;
+using Server.Presentation.Settings;
 
 namespace NetCore6
 {
@@ -41,7 +43,14 @@ namespace NetCore6
 
             #endregion
 
+            #region Application Settings
+
+            services.Configure<JWTSettings>(Configuration.GetSection("JWTSettings"));
+
+            #endregion
+
             #region External Dependencies
+
             services.SettingSqlServerDbContext(Configuration.GetConnectionString("DefaultConnection"));
 
             services.AddControllers(options => options.EnableEndpointRouting = false)
@@ -70,16 +79,23 @@ namespace NetCore6
             services.SettingAutoMapper();
 
             services.AddEndpointsApiExplorer();
+
             #endregion
 
             #region API Libraries
+
             services.SettingSwagger();
+            services.SettingsIdenity();
+            services.ConfigJwtAuth(Configuration);
             services.SettingHealthCheck();
+
             #endregion
 
             #region App Registries
+
             services.AddModelRegistry();
             services.AddServiceRegistry(Configuration);
+
             #endregion
         }
 
