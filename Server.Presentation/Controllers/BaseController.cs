@@ -1,4 +1,6 @@
 using System.Net;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using NetCore6.Core.BaseModels;
@@ -9,7 +11,7 @@ namespace NetCore6.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class BaseController<TEntity, TDto> : ControllerBase
         where TEntity : IBaseEntity
         where TDto : IBaseEntityDto

@@ -88,6 +88,7 @@ namespace NetCore6
             services.SettingsIdenity();
             services.ConfigJwtAuth(Configuration);
             services.SettingHealthCheck();
+            services.AddHttpContextAccessor();
 
             #endregion
 
@@ -115,7 +116,9 @@ namespace NetCore6
 
             app.UseRouting();
 
-            app.UseCors("MainPolicy");  
+            app.UseCors("MainPolicy");
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

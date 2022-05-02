@@ -2,9 +2,12 @@
 using Server.Bl.DTOs.User;
 using Server.Model.Entities.User;
 using Server.Services.Services.User;
+using System.Security.Claims;
 
 namespace Server.Presentation.Controllers.User
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -48,6 +51,7 @@ namespace Server.Presentation.Controllers.User
         public async Task<ActionResult<AuthenticateResponseDTO>> RefreshToken()
         {
             var emailReponse = HttpContext.User.Claims.Where(claim => claim.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").FirstOrDefault();
+            var claims = HttpContext.User.Claims.ToList();
             if (emailReponse is null)
             {
                 return BadRequest("Token could not be loaded.");

@@ -10,7 +10,7 @@ namespace Server.Bl.Validators.User
             RuleFor(x => x.Email)
                 .NotEmpty()
                 .EmailAddress()
-                .WithMessage("Username is required");
+                .WithMessage("Email is required");
 
             RuleFor(x => x.Password)
                 .NotEmpty()

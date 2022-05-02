@@ -65,7 +65,9 @@ namespace Server.Services.Services.User
             {
                 Id = user.Id,
                 Email = user.Email,
-                Password = ""
+                Password = null,
+                Name = user.Name,
+                Lastname = user.Lastname
             };
 
             var claimDB = await _userManager.GetClaimsAsync(user);
@@ -111,7 +113,9 @@ namespace Server.Services.Services.User
             var user = new ApplicationIdentityUser
             {
                 UserName = userDto.Email,
-                Email = userDto.Email
+                Email = userDto.Email,
+                Name = userDto.Name,
+                Lastname = userDto.Lastname
             };
 
             var userRegistry = await _userManager.CreateAsync(user, userDto.Password);

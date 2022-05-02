@@ -17,12 +17,33 @@ namespace NetCore6.Settings
                     {
                         Name = "CV Enterprise Project",
                         Email = string.Empty,
-                        Url = new Uri("https://solvex.com.do/"),
+                        Url = new Uri("https://page.com/"),
                     },
                     License = new OpenApiLicense
                     {
                         Name = "Use under LICX",
                         Url = new Uri("https://example.com/license"),
+                    }
+                });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[]{}
                     }
                 });
             });
