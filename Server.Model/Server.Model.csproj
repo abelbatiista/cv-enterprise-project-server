@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCore6.Core\Server.Core.csproj" />
+    <ProjectReference Include="..\Server.Core\Server.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

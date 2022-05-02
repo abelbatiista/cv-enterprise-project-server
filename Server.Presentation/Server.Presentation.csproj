@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCore6.Services\Server.Services.csproj" />
+    <ProjectReference Include="..\Server.Services\Server.Services.csproj" />
   </ItemGroup>
 
 </Project>

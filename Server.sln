@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Core", "NetCore6.Core\Server.Core.csproj", "{F4CF2ACD-B0A4-4EB3-A16C-8CA3ABAA6E71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Core", "Server.Core\Server.Core.csproj", "{F4CF2ACD-B0A4-4EB3-A16C-8CA3ABAA6E71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Model", "NetCore6.Model\Server.Model.csproj", "{B5C4BB53-63E7-47C0-AA17-3910A4AB3F39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Model", "Server.Model\Server.Model.csproj", "{B5C4BB53-63E7-47C0-AA17-3910A4AB3F39}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Bl", "NetCore6.Bl\Server.Bl.csproj", "{3B8CA92F-98C7-422C-B67A-7893B5881FE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Bl", "Server.Bl\Server.Bl.csproj", "{3B8CA92F-98C7-422C-B67A-7893B5881FE5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Services", "NetCore6.Services\Server.Services.csproj", "{E00F4F42-0DA7-419C-A7FE-6A6F703BD46E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Services", "Server.Services\Server.Services.csproj", "{E00F4F42-0DA7-419C-A7FE-6A6F703BD46E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Presentation", "NetCore6\Server.Presentation.csproj", "{033A4E11-DBC7-4164-BF6A-DCC3C7FB75BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Presentation", "Server.Presentation\Server.Presentation.csproj", "{033A4E11-DBC7-4164-BF6A-DCC3C7FB75BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Services.Test", "NetCore6.Services.Test\Server.Services.Test.csproj", "{82D40486-2A9B-4379-9603-60B83F2BA5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Services.Test", "Server.Services.Test\Server.Services.Test.csproj", "{82D40486-2A9B-4379-9603-60B83F2BA5BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
