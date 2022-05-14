@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.OData.Extensions;
 
-namespace NetCore6.Filters
+namespace Server.Filters
 {
     public class ODataFeatureAttribute: ActionFilterAttribute
     {

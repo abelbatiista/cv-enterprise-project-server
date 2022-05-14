@@ -1,8 +1,8 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using NetCore6.Core.BaseModels;
+using Server.Core.BaseModels;
 
-namespace NetCore6.Model.Extensions
+namespace Server.Model.Extensions
 {
     public static class EntityFrameworkModelBuilderExtensions
     {

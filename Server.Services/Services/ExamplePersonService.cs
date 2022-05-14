@@ -1,10 +1,10 @@
 using AutoMapper;
 using FluentValidation;
-using NetCore6.Bl.DTOs;
-using NetCore6.Model.Entities;
-using NetCore6.Model.Repositories;
+using Server.Bl.DTOs;
+using Server.Model.Entities;
+using Server.Model.Repositories;
 
-namespace NetCore6.Services.Services
+namespace Server.Services.Services
 {
     public interface IExamplePersonService : IBaseService<ExamplePerson, ExamplePersonDTO> { }
 

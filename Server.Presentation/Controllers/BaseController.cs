@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
-using NetCore6.Core.BaseModels;
-using NetCore6.Filters;
-using NetCore6.Services.Services;
+using Server.Core.BaseModels;
+using Server.Filters;
+using Server.Services.Services;
 
-namespace NetCore6.Controllers
+namespace Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

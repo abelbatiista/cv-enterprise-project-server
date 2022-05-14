@@ -1,4 +1,4 @@
-namespace NetCore6.Core.Abstract
+namespace Server.Core.Abstract
 {
     public interface IEntityOperationResult<TDto>
     {

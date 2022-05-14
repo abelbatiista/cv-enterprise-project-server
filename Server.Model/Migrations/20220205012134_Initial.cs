@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace NetCore6.Model.Migrations
+namespace Server.Model.Migrations
 {
     public partial class Initial : Migration
     {

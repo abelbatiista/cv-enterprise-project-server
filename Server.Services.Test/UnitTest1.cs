@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace NetCore6.Services.Test;
+namespace Server.Services.Test;
 
 [TestClass]
 public class UnitTest1

@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "NetCore6": {
+    "Server": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,

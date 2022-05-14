@@ -2,13 +2,15 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using NetCore6.Core.Constants;
+using Server.Core.Constants;
 using Server.Bl.DTOs.User;
 using Server.Core.Settings;
 using Server.Model.Entities.User;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Server.Services.Services.UserDetails;
+using Server.Bl.DTOs.UserDetails;
 
 namespace Server.Services.Services.User
 {
@@ -29,6 +31,7 @@ namespace Server.Services.Services.User
         private readonly IValidator<UserDTO> _validator;
         private readonly UserManager<ApplicationIdentityUser> _userManager;
         private readonly SignInManager<ApplicationIdentityUser> _signInManager;
+        private readonly IUserDetailsService _userDetailsService;
 
         #endregion
 
@@ -39,13 +42,15 @@ namespace Server.Services.Services.User
             IOptions<JWTSettings> jwtSettings,
             IValidator<UserDTO> validator,
             UserManager<ApplicationIdentityUser> userManager,
-            SignInManager<ApplicationIdentityUser> signInManager
+            SignInManager<ApplicationIdentityUser> signInManager,
+            IUserDetailsService userDetailsService
         )
         {
             _jwtSettings = jwtSettings.Value;
             _validator = validator;
             _userManager = userManager;
             _signInManager = signInManager;
+            _userDetailsService = userDetailsService;
         }
 
         #endregion
@@ -70,6 +75,8 @@ namespace Server.Services.Services.User
                 Lastname = user.Lastname
             };
 
+            var userDetails = await _userDetailsService.GetByApplicationIdentityUserId(user.Id);
+
             var claimDB = await _userManager.GetClaimsAsync(user);
 
             claims.AddRange(claimDB);
@@ -88,6 +95,8 @@ namespace Server.Services.Services.User
             return new AuthenticateResponseDTO
             {
                 User = userDto,
+                ApplicationIdentityUser = user,
+                UserDetails = userDetails,
                 Token = new JwtSecurityTokenHandler().WriteToken(securityToken),
             };
         }
@@ -124,6 +133,12 @@ namespace Server.Services.Services.User
             {
                 return new AuthenticateResponseDTO { Error = userRegistry.Errors.FirstOrDefault().Code };
             }
+
+            var Id = await _userManager.GetUserIdAsync(user);
+            await _userDetailsService.AddAsync(new UserDetailsDTO
+            {
+                ApplicationIdentityUserId = Id
+            });
 
             return await GenerateToken(user.Email);
         }

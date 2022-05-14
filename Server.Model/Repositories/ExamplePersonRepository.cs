@@ -1,7 +1,7 @@
-using NetCore6.Model.Context;
-using NetCore6.Model.Entities;
+using Server.Model.Context;
+using Server.Model.Entities;
 
-namespace NetCore6.Model.Repositories
+namespace Server.Model.Repositories
 {
     public interface IExamplePersonRepository: IBaseRepository<ExamplePerson> {}
 

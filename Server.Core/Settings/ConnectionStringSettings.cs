@@ -1,4 +1,4 @@
-namespace NetCore6.Core.Settings
+namespace Server.Core.Settings
 {
     public class ConnectionStringSettings
     {

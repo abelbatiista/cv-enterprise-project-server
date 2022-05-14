@@ -1,8 +1,8 @@
-using NetCore6.Bl.DTOs;
-using NetCore6.Model.Entities;
-using NetCore6.Services.Services;
+using Server.Bl.DTOs;
+using Server.Model.Entities;
+using Server.Services.Services;
 
-namespace NetCore6.Controllers
+namespace Server.Controllers
 {
     public class ExamplePersonController: BaseController<ExamplePerson, ExamplePersonDTO>
     {

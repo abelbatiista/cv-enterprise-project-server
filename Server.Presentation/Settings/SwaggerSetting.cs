@@ -1,6 +1,6 @@
 using Microsoft.OpenApi.Models;
 
-namespace NetCore6.Settings
+namespace Server.Settings
 {
     public static class SwaggerSetting
     {

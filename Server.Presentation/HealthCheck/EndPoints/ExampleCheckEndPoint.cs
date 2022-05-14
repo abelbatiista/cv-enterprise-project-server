@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace NetCore6.HealthCheck.EndPoints
+namespace Server.HealthCheck.EndPoints
 {
     public class ExampleCheckEndPoint : IHealthCheck
     {

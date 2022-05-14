@@ -1,6 +1,6 @@
-using NetCore6.Core.BaseModels;
+using Server.Core.BaseModels;
 
-namespace NetCore6.Bl.DTOs
+namespace Server.Bl.DTOs
 {
     public class ExamplePersonDTO: BaseEntityDto
     {

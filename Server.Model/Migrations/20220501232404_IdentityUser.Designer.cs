@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NetCore6.Model.Context;
+using Server.Model.Context;
 
 #nullable disable
 
-namespace NetCore6.Model.Migrations
+namespace Server.Model.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20220501232404_IdentityUser")]
@@ -157,7 +157,7 @@ namespace NetCore6.Model.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("NetCore6.Model.Entities.ExamplePerson", b =>
+            modelBuilder.Entity("Server.Model.Entities.ExamplePerson", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

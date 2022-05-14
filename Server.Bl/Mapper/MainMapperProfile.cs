@@ -1,15 +1,28 @@
 using AutoMapper;
-using NetCore6.Bl.DTOs;
-using NetCore6.Model.Entities;
+using Server.Bl.DTOs;
+using Server.Bl.DTOs.File;
+using Server.Bl.DTOs.UserDetails;
+using Server.Model.Entities;
+using Server.Model.Entities.UserDetails;
+using FileEntity = Server.Model.Entities.File.File;
 
-namespace NetCore6.Bl.Mapper
+namespace Server.Bl.Mapper
 {
     public class MainMapperProfile : Profile
     {
         public MainMapperProfile()
         {
-            CreateMap<ExamplePersonDTO, ExamplePerson>();
-            CreateMap<ExamplePerson, ExamplePersonDTO>();
+            CreateMap<ExamplePerson, ExamplePersonDTO>().ReverseMap();
+            CreateMap<Biography, BiographyDTO>().ReverseMap();
+            CreateMap<Contact, ContactDTO>().ReverseMap();
+            CreateMap<Education, EducationDTO>().ReverseMap();
+            CreateMap<GeneralInformation, GeneralInformationDTO>().ReverseMap();
+            CreateMap<Skills, SkillsDTO>().ReverseMap();
+            CreateMap<Social, SocialDTO>().ReverseMap();
+            CreateMap<UserDetails, UserDetailsDTO>().ReverseMap();
+            CreateMap<WorkExperience, WorkExperienceDTO>().ReverseMap();
+            CreateMap<WorkPlataform, WorkPlataformDTO>().ReverseMap();
+            CreateMap<FileEntity, FileDTO>().ReverseMap();
         }
     }
 }

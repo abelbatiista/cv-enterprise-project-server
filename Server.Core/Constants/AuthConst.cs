@@ -1,4 +1,4 @@
-namespace NetCore6.Core.Constants
+namespace Server.Core.Constants
 {
     public static class AuthConst
     {

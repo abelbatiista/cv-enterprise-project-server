@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace NetCore6.Bl.Settings
+namespace Server.Bl.Settings
 {
     public static class AutoMapperSetting
     {

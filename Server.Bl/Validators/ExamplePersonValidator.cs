@@ -1,9 +1,9 @@
 using FluentValidation;
-using NetCore6.Bl.DTOs;
+using Server.Bl.DTOs;
 
-namespace NetCore6.Bl.Validators
+namespace Server.Bl.Validators
 {
-    public class ExamplePersonValidator: AbstractValidator<ExamplePersonDTO>
+    public class ExamplePersonValidator : AbstractValidator<ExamplePersonDTO>
     {
         public ExamplePersonValidator()
         {

@@ -1,7 +1,7 @@
 using FluentValidation.Results;
-using NetCore6.Core.Abstract;
+using Server.Core.Abstract;
 
-namespace NetCore6.Bl.Extensions
+namespace Server.Bl.Extensions
 {
     public static class EntityOperationResultExtensions
     {

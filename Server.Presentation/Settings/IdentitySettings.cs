@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using NetCore6.Model.Context;
+using Server.Model.Context;
 using Server.Model.Entities.User;
 
 namespace Server.Presentation.Settings

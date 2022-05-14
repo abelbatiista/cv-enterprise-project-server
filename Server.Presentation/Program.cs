@@ -1,4 +1,4 @@
-using NetCore6;
+using Server;
 
 var builder = WebApplication.CreateBuilder(args);
 

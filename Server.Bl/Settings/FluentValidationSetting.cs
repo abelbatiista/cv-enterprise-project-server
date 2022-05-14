@@ -1,8 +1,8 @@
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
-using NetCore6.Bl.Validators;
+using Server.Bl.Validators;
 
-namespace NetCore6.Bl.Settings
+namespace Server.Bl.Settings
 {
     public static class FluentValidationSetting
     {

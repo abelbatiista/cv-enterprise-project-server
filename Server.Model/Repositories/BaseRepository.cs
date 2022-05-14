@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using NetCore6.Core.BaseModels;
-using NetCore6.Model.Context;
+using Server.Core.BaseModels;
+using Server.Model.Context;
 
-namespace NetCore6.Model.Repositories
+namespace Server.Model.Repositories
 {
     public interface IBaseRepository<TEntity>
     {

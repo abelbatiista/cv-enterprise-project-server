@@ -2,12 +2,12 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
-using NetCore6.Bl.Extensions;
-using NetCore6.Core.Abstract;
-using NetCore6.Core.BaseModels;
-using NetCore6.Model.Repositories;
+using Server.Bl.Extensions;
+using Server.Core.Abstract;
+using Server.Core.BaseModels;
+using Server.Model.Repositories;
 
-namespace NetCore6.Services.Services
+namespace Server.Services.Services
 {
     public interface IBaseService<TEntity, TDto>
     {

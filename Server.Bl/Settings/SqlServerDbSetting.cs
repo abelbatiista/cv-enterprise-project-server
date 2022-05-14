@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using NetCore6.Model.Context;
+using Server.Model.Context;
 
-namespace NetCore6.Bl.Settings
+namespace Server.Bl.Settings
 {
     public static class SqlServerDbSetting
     {

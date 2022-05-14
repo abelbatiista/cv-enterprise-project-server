@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NetCore6.Model.Context;
+using Server.Model.Context;
 
 #nullable disable
 
-namespace NetCore6.Model.Migrations
+namespace Server.Model.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20220205012134_Initial")]
@@ -23,7 +23,7 @@ namespace NetCore6.Model.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("NetCore6.Model.Entities.ExamplePerson", b =>
+            modelBuilder.Entity("Server.Model.Entities.ExamplePerson", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

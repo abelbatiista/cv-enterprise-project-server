@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Diagnostics.HealthChecks;
-using NetCore6.HealthCheck.EndPoints;
-using NetCore6.Model.Context;
+using Server.HealthCheck.EndPoints;
+using Server.Model.Context;
 
-namespace NetCore6.Settings
+namespace Server.Settings
 {
     public static class HealthCheckSetting
     {

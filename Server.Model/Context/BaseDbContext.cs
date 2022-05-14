@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using NetCore6.Core.BaseModels;
-using NetCore6.Core.Constants;
-using NetCore6.Model.Extensions;
+using Server.Core.BaseModels;
+using Server.Core.Constants;
+using Server.Model.Extensions;
 using Server.Model.Entities.User;
 
-namespace NetCore6.Model.Context
+namespace Server.Model.Context
 {
     public interface IDbContext
     {

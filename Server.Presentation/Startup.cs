@@ -3,15 +3,15 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.Net.Http.Headers;
-using NetCore6.Bl.Settings;
-using NetCore6.Middlewares;
-using NetCore6.Model.IoC;
-using NetCore6.Services.IoC;
-using NetCore6.Settings;
+using Server.Bl.Settings;
+using Server.Middlewares;
+using Server.Model.IoC;
+using Server.Services.IoC;
+using Server.Settings;
 using Server.Core.Settings;
 using Server.Presentation.Settings;
 
-namespace NetCore6
+namespace Server
 {
     public class Startup
     {
@@ -46,6 +46,7 @@ namespace NetCore6
             #region Application Settings
 
             services.Configure<JWTSettings>(Configuration.GetSection("JWTSettings"));
+            services.Configure<FileSettings>(Configuration.GetSection("FileSettings"));
 
             #endregion
 

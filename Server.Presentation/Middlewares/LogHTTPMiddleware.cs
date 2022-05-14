@@ -1,4 +1,4 @@
-namespace NetCore6.Middlewares
+namespace Server.Middlewares
 {
     public static class LogHTTPMiddlewareExtensions
     {

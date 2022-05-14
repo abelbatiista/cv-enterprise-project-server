@@ -1,6 +1,6 @@
-using NetCore6.Core.BaseModels;
+using Server.Core.BaseModels;
 
-namespace NetCore6.Model.Entities
+namespace Server.Model.Entities
 {
     public class ExamplePerson: BaseEntity
     {

@@ -1,9 +1,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NetCore6.Services.Services;
+using Server.Services.Services;
+using Server.Services.Services.File;
 using Server.Services.Services.User;
+using Server.Services.Services.UserDetails;
 
-namespace NetCore6.Services.IoC
+namespace Server.Services.IoC
 {
     public static class ServiceRegistry
     {
@@ -12,6 +14,16 @@ namespace NetCore6.Services.IoC
 
             services.AddTransient<IExamplePersonService, ExamplePersonService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IBiographyService, BiographyService>();
+            services.AddTransient<IContactService, ContactService>();
+            services.AddTransient<IEducationService, EducationService>();
+            services.AddTransient<IGeneralInformationService, GeneralInformationService>();
+            services.AddTransient<ISkillsService, SkillsService>();
+            services.AddTransient<ISocialService, SocialService>();
+            services.AddTransient<IUserDetailsService, UserDetailsService>();
+            services.AddTransient<IWorkExperienceService, WorkExperienceService>();
+            services.AddTransient<IWorkPlataformService, WorkPlataformService>();
+            services.AddTransient<IFileService, FileService>();
 
             services.AddHttpClient("BackEnd", client => 
             {

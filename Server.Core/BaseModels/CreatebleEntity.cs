@@ -1,4 +1,4 @@
-namespace NetCore6.Core.BaseModels
+namespace Server.Core.BaseModels
 {
     #region CreatebleEntity
     public interface ICreatebleEntity : IBaseEntity
