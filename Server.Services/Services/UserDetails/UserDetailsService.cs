@@ -3,6 +3,8 @@ using FluentValidation;
 using Server.Bl.DTOs.UserDetails;
 using UserDetailsEntity = Server.Model.Entities.UserDetails.UserDetails;
 using Server.Model.Repositories.UserDetails;
+using AutoMapper.QueryableExtensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Server.Services.Services.UserDetails
 {
@@ -26,8 +28,12 @@ namespace Server.Services.Services.UserDetails
 
         public async Task<UserDetailsDTO> GetByApplicationIdentityUserId(string applicationIdentityUserId)
         {
-            var entity = await _userDetailsRepository.GetByApplicationIdentityUserId(applicationIdentityUserId);
-            var dto = _mapper.Map<UserDetailsDTO>(entity);
+            //var entity = await _userDetailsRepository.GetByApplicationIdentityUserId(applicationIdentityUserId);
+            //var dto = _mapper.Map<UserDetailsDTO>(entity);
+            //return dto;
+            var query = base.AsQuery();
+            var list = query.ProjectTo<UserDetailsDTO>(_mapper.ConfigurationProvider);
+            var dto = await list.Where(x => x.ApplicationIdentityUserId == applicationIdentityUserId).FirstOrDefaultAsync();
             return dto;
         }
     }

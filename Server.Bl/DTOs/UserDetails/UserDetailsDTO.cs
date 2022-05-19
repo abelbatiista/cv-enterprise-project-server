@@ -1,4 +1,5 @@
-﻿using Server.Core.BaseModels;
+﻿using Server.Bl.DTOs.Enterprise;
+using Server.Core.BaseModels;
 using Server.Model.Entities.User;
 
 namespace Server.Bl.DTOs.UserDetails
@@ -15,5 +16,6 @@ namespace Server.Bl.DTOs.UserDetails
         public IList<WorkExperienceDTO> WorkExperiences { get; set; }
         public string ApplicationIdentityUserId { get; set; }
         public ApplicationIdentityUser ApplicationIdentityUser { get; set; }
+        //public IList<VacantDTO> Vacants { get; set; }
     }
 }

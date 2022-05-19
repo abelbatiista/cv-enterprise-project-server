@@ -1,5 +1,6 @@
 ﻿using Server.Model.Entities.User;
 using Server.Core.BaseModels;
+using Server.Model.Entities.Enterprise;
 
 namespace Server.Model.Entities.UserDetails
 {
@@ -15,5 +16,6 @@ namespace Server.Model.Entities.UserDetails
         public IList<WorkExperience> WorkExperiences { get; set; }
         public string ApplicationIdentityUserId { get; set; }
         public ApplicationIdentityUser ApplicationIdentityUser { get; set; }
+        //public IList<Vacant> Vacants { get; set; }
     }
 }

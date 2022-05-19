@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Server.Model.Entities;
+using Server.Model.Entities.Enterprise;
 using Server.Model.Entities.UserDetails;
+using Server.Model.Entities.VacantUser;
 using FileEntity = Server.Model.Entities.File.File;
 
 namespace Server.Model.Context
@@ -23,6 +25,9 @@ namespace Server.Model.Context
         public DbSet<WorkExperience> WorkExperiences { get; set; }
         public DbSet<WorkPlataform> WorkPlataforms { get; set; }
         public DbSet<FileEntity> Files { get; set; }
+        public DbSet<Enterprise> Enterprises { get; set; }
+        public DbSet<Vacant> Vacants { get; set; }
+        public DbSet<VacantUser> VacantUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

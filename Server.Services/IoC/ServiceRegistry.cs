@@ -1,9 +1,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Server.Services.Services;
+using Server.Services.Services.Enterprise;
 using Server.Services.Services.File;
 using Server.Services.Services.User;
 using Server.Services.Services.UserDetails;
+using Server.Services.Services.VacantUser;
 
 namespace Server.Services.IoC
 {
@@ -24,6 +26,9 @@ namespace Server.Services.IoC
             services.AddTransient<IWorkExperienceService, WorkExperienceService>();
             services.AddTransient<IWorkPlataformService, WorkPlataformService>();
             services.AddTransient<IFileService, FileService>();
+            services.AddTransient<IEnterpriseService, EnterpriseService>();
+            services.AddTransient<IVacantService, VacantService>();
+            services.AddTransient<IVacantUserService, VacantUserService>();
 
             services.AddHttpClient("BackEnd", client => 
             {

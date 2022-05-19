@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Server.Model.Context;
 
@@ -11,9 +12,10 @@ using Server.Model.Context;
 namespace Server.Model.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220514205159_Enterprise")]
+    partial class Enterprise
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -865,53 +867,6 @@ namespace Server.Model.Migrations
                     b.ToTable("WorkPlataforms");
                 });
 
-            modelBuilder.Entity("Server.Model.Entities.VacantUser.VacantUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTimeOffset>("CreatedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<bool>("Deleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("DeletedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTimeOffset?>("DeletedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<bool>("Updated")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTimeOffset?>("UpdatedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<int>("UserDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VacantId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserDetailsId");
-
-                    b.HasIndex("VacantId");
-
-                    b.ToTable("VacantUsers");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -1080,25 +1035,6 @@ namespace Server.Model.Migrations
                         .IsRequired();
 
                     b.Navigation("UserDetails");
-                });
-
-            modelBuilder.Entity("Server.Model.Entities.VacantUser.VacantUser", b =>
-                {
-                    b.HasOne("Server.Model.Entities.UserDetails.UserDetails", "UserDetails")
-                        .WithMany()
-                        .HasForeignKey("UserDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Server.Model.Entities.Enterprise.Vacant", "Vacant")
-                        .WithMany()
-                        .HasForeignKey("VacantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("UserDetails");
-
-                    b.Navigation("Vacant");
                 });
 
             modelBuilder.Entity("Server.Model.Entities.UserDetails.UserDetails", b =>
